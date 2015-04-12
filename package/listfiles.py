@@ -9,7 +9,6 @@ def listfiles():
     try:
         for path, dirs, files in os.walk(folder_path):
             for filename in files:
-                count=0
                 print("Nom Long : "+path+"\\"+filename)
                 #Taille
                 print("Taille: "+str(os.path.getsize(path+"\\"+filename))+" Octets")
@@ -19,4 +18,4 @@ def listfiles():
                 print("Date de Modification: "+str(time.ctime(os.path.getmtime(path+"\\"+filename))))
     except:
         print("Fail")
-        #faire une gestion des erreurs plus avancée
+        #faire une gestion des erreurs plus avancee
