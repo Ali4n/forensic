@@ -4,7 +4,7 @@ __author__="Anubis"
 import os
 import subprocess
 from package.volatility import *
-
+from package.listfiles import *
 #windows7 32 ou 64 bits
 
 def main():
@@ -81,7 +81,7 @@ def main():
             while 1:
                 try:
                     menu_ntfs_filesystem_analysis = input("#####################  MENU 4: NTFS Filesystem Analysis  #####################\n"
-                                                              " 1: A Voir\n"
+                                                              " 1: List Files\n"
                                                               " 2: Retour au menu principal\n"
                     )
                 except:
@@ -89,7 +89,7 @@ def main():
                     exit()
 
                 if menu_ntfs_filesystem_analysis == 1:
-                    print "A voir"
+                    listfiles()
                 elif menu_ntfs_filesystem_analysis == 2:
                     break
 
