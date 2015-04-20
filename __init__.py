@@ -87,8 +87,9 @@ def main():
             while 1:
                 try:
                     menu_ntfs_filesystem_analysis = input("#####################  MENU 4: NTFS Filesystem Analysis  #####################\n"
-                                                              " 1: List Files\n"
-                                                              " 2: Retour au menu principal\n"
+                                                              " 1: List Personal Files\n"
+                                                              " 2: List Web Browsers History\n"
+                                                              " 3: Retour au menu principal\n"
                     )
                 except:
                     print "Saisir le numero du menu, s il vous plait."
