@@ -19,11 +19,12 @@ def main():
                 "---- Saisir le numero du menu ----\n"
                 " 1: Memory Dump\n"
                 " 2: Artifact Analysis\n"
-                " 3: Registery and Event Log Analysis\n"
-                " 4: NTFS Filesystem Analysis \n"
-                " 5: Network Support Utilities\n"
-                " 6: ALL \n"
-                " 7: Quitter le programme\n"
+                " 3: Registry Analysis\n"
+                " 4: Event Log Analysis\n"
+                " 5: NTFS Filesystem Analysis\n"
+                " 6: Network Support Utilities\n"
+                " 7: ALL\n"
+                " 8: Quitter le programme\n"
             )
         except:
             print "Saisir le numero du menu, s il vous plait."
@@ -50,7 +51,7 @@ def main():
             while 1:
                 try:
                     menu_artifact_analysis = input("#####################  MENU 2: Artifact Analysis  #####################\n"
-                                                 "1: A Voir\n"
+                                                 "1: Prefech \n"
                                                  "2: Retour au menu principal\n"
                     )
                 except:
@@ -65,9 +66,11 @@ def main():
         elif menu_principal == 3:
             while 1:
                 try:
-                    menu_registery_event_log_analysis = input("################  MENU 3: Registery and Event Log Analysis  ################\n"
-                                                              " 1: A Voir\n"
-                                                              " 2: Retour au menu principal\n"
+                    menu_registery_event_log_analysis = input("################  MENU 3: Registry Analysis  ################\n"
+                                                              " 1: Base SAM\n"
+                                                              " 2: Security Policy"
+                                                              " 3: "
+                                                              " 4: Retour au menu principal\n"
                     )
                 except:
                     print "Saisir le numero du menu, s il vous plait."
