@@ -24,4 +24,8 @@ def webhistory():
     folder_path = "C:\\Users"
     print(folder_path)
     try:
+        getcwd = os.getcwd()
+        command_line = "\\package\\library\\NirSoft\\browsinghistoryview.exe /HistorySource 1 /LoadIE 1 /LoadFirefox 1 /LoadChrome 1 /LoadSafari 1 /stext "C:\\tmp_forensic\web_history\web_history.txt""
+        command_line = getcwd + command_line
     except:
+        print("Fail")
