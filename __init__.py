@@ -83,7 +83,7 @@ def main():
                 elif menu_registery_event_log_analysis == 2:
                     break
 
-elif menu_principal == 4:
+        elif menu_principal == 4:
             while 1:
                 try:
                     menu_registery_event_log_analysis = input("################  MENU 4: Event Log Analysis  ################\n"
