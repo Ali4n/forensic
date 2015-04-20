@@ -5,6 +5,7 @@ import os
 import subprocess
 from package.volatility import *
 from package.listfiles import *
+from package.dumpit import *
 #windows7 32 ou 64 bits
 
 def main():
@@ -34,8 +35,8 @@ def main():
             while 1:
                 try:
                     menu_memory_dump = input("#####################  MENU 1: Memory Dump  #####################\n"
-                                             "1: volatility -h : list all available options and their default values.\n"
-                                             "2: Retour au menu principal\n"
+                                             "1: DumpIt\n"
+                                             "2: volatility -h : list all available options and their default values.\n"
                                              "3: Retour au menu principal\n"
                     )
                 except:
@@ -43,8 +44,9 @@ def main():
                     exit()
 
                 if menu_memory_dump == 1:
-                    volatility(1)
+                    dumpit()
                 elif menu_memory_dump == 2:
+                    volatility(1)
                     break
 
         elif menu_principal == 2:
