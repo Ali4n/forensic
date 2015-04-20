@@ -35,6 +35,7 @@ def main():
                     menu_memory_dump = input("#####################  MENU 1: Memory Dump  #####################\n"
                                              "1: volatility -h : list all available options and their default values.\n"
                                              "2: Retour au menu principal\n"
+                                             "3: Retour au menu principal\n"
                     )
                 except:
                     print "Saisir le numero du menu, s il vous plait."
