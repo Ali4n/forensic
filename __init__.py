@@ -36,7 +36,7 @@ def main():
                 try:
                     menu_memory_dump = input("#####################  MENU 1: Memory Dump  #####################\n"
                                              "1: DumpIt\n"
-                                             "2: volatility -h : list all available options and their default values.\n"
+                                             "2: Volatility\n"
                                              "3: Retour au menu principal\n"
                     )
                 except:
@@ -71,7 +71,7 @@ def main():
                     menu_registery_event_log_analysis = input("################  MENU 3: Registry Analysis  ################\n"
                                                               " 1: Base SAM\n"
                                                               " 2: Security Policy"
-                                                              " 3: "
+                                                              " 3: Get NTUSER.DAT infos"
                                                               " 4: Retour au menu principal\n"
                     )
                 except:
@@ -83,10 +83,26 @@ def main():
                 elif menu_registery_event_log_analysis == 2:
                     break
 
-        elif menu_principal == 4:
+elif menu_principal == 4:
             while 1:
                 try:
-                    menu_ntfs_filesystem_analysis = input("#####################  MENU 4: NTFS Filesystem Analysis  #####################\n"
+                    menu_registery_event_log_analysis = input("################  MENU 4: Event Log Analysis  ################\n"
+                                                              " 1: Base SAM\n"
+                                                              " 4: Retour au menu principal\n"
+                    )
+                except:
+                    print "Saisir le numero du menu, s il vous plait."
+                    exit()
+
+                if menu_registery_event_log_analysis == 1:
+                    print "A Voir"
+                elif menu_registery_event_log_analysis == 2:
+                    break
+
+        elif menu_principal == 5:
+            while 1:
+                try:
+                    menu_ntfs_filesystem_analysis = input("#####################  MENU 5: NTFS Filesystem Analysis  #####################\n"
                                                               " 1: List Personal Files\n"
                                                               " 2: List Web Browsers History\n"
                                                               " 3: Retour au menu principal\n"
@@ -98,9 +114,11 @@ def main():
                 if menu_ntfs_filesystem_analysis == 1:
                     listfiles()
                 elif menu_ntfs_filesystem_analysis == 2:
+                    webhistory()
+                elif menu_ntfs_filesystem_analysis == 3:
                     break
 
-        elif menu_principal == 5:
+        elif menu_principal == 6:
             while 1:
                 try:
                     menu_network_support_utilities = input("#####################  MENU 5: Network Support Utilities  #####################\n"
@@ -116,11 +134,11 @@ def main():
                 elif menu_network_support_utilities == 2:
                     break
 
-        elif menu_principal == 6:
+        elif menu_principal == 7:
             print "ALL"
             volatility(1)
 
-        elif menu_principal == 7:
+        elif menu_principal == 8:
             print "Bonne journee, a bientot"
             exit()
 

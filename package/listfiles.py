@@ -19,3 +19,9 @@ def listfiles():
     except:
         print("Fail")
         #faire une gestion des erreurs plus avancee
+
+def webhistory():
+    folder_path = "C:\\Users"
+    print(folder_path)
+    try:
+    except:
