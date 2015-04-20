@@ -91,7 +91,7 @@ def main():
                 try:
                     menu_ntfs_filesystem_analysis = input("#####################  MENU 4: NTFS Filesystem Analysis  #####################\n"
                                                               " 1: List Files\n"
-                                                              " 2: Recovery Password\n"
+                                                              " 2: Recovery Password\n")
                     menu_registery_event_log_analysis = input("################  MENU 4: Event Log Analysis  ################\n"
                                                               " 1: Base SAM\n"
                                                               " 4: Retour au menu principal\n"
