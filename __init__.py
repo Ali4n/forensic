@@ -6,6 +6,8 @@ import subprocess
 from package.volatility import *
 from package.listfiles import *
 from package.dumpit import *
+from package.webhistory import *
+
 from package.recoverypassword import *
 #windows7 32 ou 64 bits
 
@@ -37,7 +39,7 @@ def main():
                 try:
                     menu_memory_dump = input("#####################  MENU 1: Memory Dump  #####################\n"
                                              "1: DumpIt\n"
-                                             "2: volatility -h : list all available options and their default values.\n"
+                                             "2: Volatility\n"
                                              "3: Retour au menu principal\n"
                     )
                 except:
@@ -72,7 +74,7 @@ def main():
                     menu_registery_event_log_analysis = input("################  MENU 3: Registry Analysis  ################\n"
                                                               " 1: Base SAM\n"
                                                               " 2: Security Policy"
-                                                              " 3: "
+                                                              " 3: Get NTUSER.DAT infos"
                                                               " 4: Retour au menu principal\n"
                     )
                 except:
@@ -90,6 +92,26 @@ def main():
                     menu_ntfs_filesystem_analysis = input("#####################  MENU 4: NTFS Filesystem Analysis  #####################\n"
                                                               " 1: List Files\n"
                                                               " 2: Recovery Password\n"
+                    menu_registery_event_log_analysis = input("################  MENU 4: Event Log Analysis  ################\n"
+                                                              " 1: Base SAM\n"
+                                                              " 4: Retour au menu principal\n"
+                    )
+                except:
+                    print "Saisir le numero du menu, s il vous plait."
+                    exit()
+
+                if menu_registery_event_log_analysis == 1:
+                    print "A Voir"
+                elif menu_registery_event_log_analysis == 2:
+                    break
+
+        elif menu_principal == 5:
+            while 1:
+                try:
+                    menu_ntfs_filesystem_analysis = input("#####################  MENU 5: NTFS Filesystem Analysis  #####################\n"
+                                                              " 1: List Personal Files\n"
+                                                              " 2: List Web Browsers History\n"
+                                                              " 3: Retour au menu principal\n"
                     )
                 except:
                     print "Saisir le numero du menu, s il vous plait."
@@ -99,6 +121,8 @@ def main():
                     listfiles()
                 elif menu_ntfs_filesystem_analysis == 2:
                     recoverypassword()
+                    webhistory()
+                elif menu_ntfs_filesystem_analysis == 3:
                     break
 
         elif menu_principal == 6:
