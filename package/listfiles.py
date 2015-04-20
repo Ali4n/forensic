@@ -19,15 +19,3 @@ def listfiles():
     except:
         print("Fail")
         #faire une gestion des erreurs plus avancee
-
-def webhistory():
-    folder_path = "C:\\tmp_forensic\\web_history\\"
-    try:
-        file = folder_path + "web_history.txt"
-        print (file)
-        command_line = ".\\package\\library\\NirSoft\\browsinghistoryview.exe /HistorySource 1 /LoadIE 1 /LoadFirefox 1 /LoadChrome 1 /LoadSafari 1 /stext " + file
-        #command_line = getcwd + command_line
-        print (command_line)
-        p = subprocess.Popen(command_line, stdout=subprocess.PIPE, shell=True)
-    except:
-        print("L'historique n'a pas ete exporte !\n\n")

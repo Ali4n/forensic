@@ -6,6 +6,7 @@ import subprocess
 from package.volatility import *
 from package.listfiles import *
 from package.dumpit import *
+from package.webhistory import *
 #windows7 32 ou 64 bits
 
 def main():
