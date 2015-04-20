@@ -6,6 +6,7 @@ import subprocess
 from package.volatility import *
 from package.listfiles import *
 from package.dumpit import *
+from package.recoverypassword import *
 #windows7 32 ou 64 bits
 
 def main():
@@ -83,12 +84,12 @@ def main():
                 elif menu_registery_event_log_analysis == 2:
                     break
 
-        elif menu_principal == 4:
+        elif menu_principal == 5:
             while 1:
                 try:
                     menu_ntfs_filesystem_analysis = input("#####################  MENU 4: NTFS Filesystem Analysis  #####################\n"
                                                               " 1: List Files\n"
-                                                              " 2: Retour au menu principal\n"
+                                                              " 2: Recovery Password\n"
                     )
                 except:
                     print "Saisir le numero du menu, s il vous plait."
@@ -97,13 +98,14 @@ def main():
                 if menu_ntfs_filesystem_analysis == 1:
                     listfiles()
                 elif menu_ntfs_filesystem_analysis == 2:
+                    recoverypassword()
                     break
 
-        elif menu_principal == 5:
+        elif menu_principal == 6:
             while 1:
                 try:
                     menu_network_support_utilities = input("#####################  MENU 5: Network Support Utilities  #####################\n"
-                                                            "1: A Voir\n"
+                                                            "1: Network\n"
                                                             "2: Retour au menu principal\n"
                     )
                 except:
@@ -111,15 +113,15 @@ def main():
                     exit()
 
                 if menu_network_support_utilities == 1:
-                    print "A voir"
+                    print "test"
                 elif menu_network_support_utilities == 2:
                     break
 
-        elif menu_principal == 6:
+        elif menu_principal == 7:
             print "ALL"
             volatility(1)
 
-        elif menu_principal == 7:
+        elif menu_principal == 8:
             print "Bonne journee, a bientot"
             exit()
 
